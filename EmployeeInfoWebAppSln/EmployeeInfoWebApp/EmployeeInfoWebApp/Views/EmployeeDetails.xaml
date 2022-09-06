@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeInfoWebApp.Views.EmployeeDetails"
+             Title="{Binding Name}">
+    <StackLayout Margin="20"
+                 VerticalOptions="StartAndExpand">
+        
+        <Label Text="LastName"/>
+        <Entry Text="{Binding LastName}"
+               Placeholder="LastName"/>
+
+        <Label Text="FirstName"/>
+        <Entry Text="{Binding FirstName}"
+            Placeholder="FirstName"/>
+        
+        <Label Text="Date of Birth"/>
+        <Entry Text="{Binding BirthDate}"
+               Placeholder="Date of Birth"/>
+
+       <Label Text="Employee Number"/>
+        <Entry Text="{Binding EmployeeNum}"
+               Placeholder="Employee Number"/>
+
+        <Label Text="Employeed Date"/>
+        <Entry Text="{Binding EmployedDate}"
+               Placeholder="Employed Date"/>
+
+        <Label Text="Terminated Date"/>
+        <Entry Text="{Binding Terminated}"
+               Placeholder="Terminated Date"/>
+
+        <Button x:Name="Save" Text="Save" Clicked="Save_Clicked"/>
+        <Button x:Name="Delete" Text="Delete" Clicked="Delete_Clicked"/>
+        <Button x:Name="Cancel" Text="Cancel" Clicked="Cancel_Clicked"/>
+
+    </StackLayout>
+</ContentPage>

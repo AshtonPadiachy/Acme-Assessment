@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeInfoWebApp.Views.EmployeeDetailsList"
+             Title="Employee Maintenance">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="AddItem" Text="Add" Clicked="AddItem_Clicked">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="Android" Value="basket2.png"/>
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="detailsView" Margin="20" ItemSelected="detailsView_ItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0"/>
+                            <ColumnDefinition Width=" *"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        
+
+                        <Label Text="Last Name:" FontSize ="12" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start"/>
+                        <Label Text="{Binding LastName}" FontSize="12" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" />
+                        
+                        <Label Text="Employee Number:" FontSize="12" Grid.Row="2" Grid.Column="1" HorizontalOptions="Start" />
+                        <Label Text="{Binding EmployeeNum}"  FontSize="12" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" />
+                        
+
+                    
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
