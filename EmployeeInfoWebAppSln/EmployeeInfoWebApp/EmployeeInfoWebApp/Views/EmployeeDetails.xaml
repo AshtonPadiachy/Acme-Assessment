@@ -5,34 +5,39 @@
              Title="{Binding Name}">
     <StackLayout Margin="20"
                  VerticalOptions="StartAndExpand">
-        
-        <Label Text="LastName"/>
-        <Entry Text="{Binding LastName}"
+        <Frame>
+            <StackLayout>
+                <Label Text="LastName"/>
+            <Entry Text="{Binding LastName}"
                Placeholder="LastName"/>
 
-        <Label Text="FirstName"/>
-        <Entry Text="{Binding FirstName}"
+
+            <Label Text="FirstName"/>
+            <Entry Text="{Binding FirstName}"
             Placeholder="FirstName"/>
-        
-        <Label Text="Date of Birth"/>
-        <Entry Text="{Binding BirthDate}"
+
+            <Label Text="Date of Birth"/>
+            <Entry Text="{Binding BirthDate}"
                Placeholder="Date of Birth"/>
 
-       <Label Text="Employee Number"/>
-        <Entry Text="{Binding EmployeeNum}"
+            <Label Text="Employee Number"/>
+            <Entry Text="{Binding EmployeeNum}"
                Placeholder="Employee Number"/>
 
-        <Label Text="Employeed Date"/>
-        <Entry Text="{Binding EmployedDate}"
+            <Label Text="Employeed Date"/>
+            <Entry Text="{Binding EmployedDate}"
                Placeholder="Employed Date"/>
 
-        <Label Text="Terminated Date"/>
-        <Entry Text="{Binding Terminated}"
+            <Label Text="Terminated Date"/>
+            <Entry Text="{Binding Terminated}"
                Placeholder="Terminated Date"/>
+            </StackLayout>
+        </Frame>
+        
 
-        <Button x:Name="Save" Text="Save" Clicked="Save_Clicked"/>
-        <Button x:Name="Delete" Text="Delete" Clicked="Delete_Clicked"/>
-        <Button x:Name="Cancel" Text="Cancel" Clicked="Cancel_Clicked"/>
+        <Button x:Name="Save" Text="Save" Clicked="Save_Clicked"   BackgroundColor="#5C6898"/>
+        <Button x:Name="Delete" Text="Delete" Clicked="Delete_Clicked"   BackgroundColor="#5C6898"/>
+        <Button x:Name="Cancel" Text="Cancel" Clicked="Cancel_Clicked"   BackgroundColor="#5C6898"/>
 
     </StackLayout>
 </ContentPage>
